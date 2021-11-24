@@ -8,13 +8,17 @@ const mutations = {
   }
 }
 const actions = {
-  getCatagtoryList () {
-    getCatagtoryList.then(res => {
-      console.log(res)
-    })
+  async getCatagtoryList () {
+    console.log(1111111111111)
+    // getCatagtoryList.then(res => {
+    //   console.log(res)
+    // })
+    const res = await getCatagtoryList()
+    console.log(res)
   }
 }
 export default {
+  namespaced: true,
   state,
   mutations,
   actions

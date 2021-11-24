@@ -12,6 +12,7 @@
   </ul>
 </template>
 <script>
+import { mapActions } from 'vuex'
 export default {
   data () {
     return {
@@ -20,9 +21,12 @@ export default {
     }
   },
   computed: {},
-  async created () {},
+  created () {
+    this.getCatagtoryList()
+  },
   methods: {
-    liClick (index) {}
+    liClick (index) {},
+    ...mapActions('catagtory', ['getCatagtoryList'])
   }
 }
 </script>
