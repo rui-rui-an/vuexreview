@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <catagtory></catagtory>
-    <list></list>
-    <!-- <div id="app">
+    <!-- <catagtory></catagtory>
+    <list></list> -->
+    <div id="app">
       <ul class="catagtory">
         <li class="select">开发者资讯</li>
         <li>ios</li>
@@ -45,17 +45,17 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 <script>
 // 组件套用组件1:导入2:注册3:使用
-import catagtory from '@/components/catagtory'
-import list from '@/components/list'
+// import catagtory from '@/components/catagtory'
+// import list from '@/components/list'
 export default {
   components: {
-    catagtory,
-    list
+    // catagtory,
+    // list
   }
 }
 </script>
