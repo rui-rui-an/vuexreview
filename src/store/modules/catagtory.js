@@ -1,20 +1,22 @@
 import { getCatagtoryList } from '@/api/catagtory'
 const state = {
-  catagtoryList: []
+  catagtoryList: [],
+  currIndex: 0
 }
 const mutations = {
-  setCatagtoryList (store, value) {
-    store.state.catagtoryList = value
+  setCatagtoryList (state, value) {
+    state.catagtoryList = value
+  },
+  setCurrIndex (state, value) {
+    state.currIndex = value
   }
 }
 const actions = {
-  async getCatagtoryList () {
-    console.log(1111111111111)
-    // getCatagtoryList.then(res => {
-    //   console.log(res)
-    // })
+  async getCatagtoryList (store) {
     const res = await getCatagtoryList()
-    console.log(res)
+    store.commit('setCatagtoryList', res.data.data.channels)
+    // 调用list模块内的actions方法
+    store.dispatch('list/getListInfo', null, { root: true })
   }
 }
 export default {
